@@ -10,9 +10,9 @@ import tw from "twin.macro";
 import styled from "styled-components";
 
 const Container = styled.nav`
-  ${tw`flex bg-[#1E1D1C] gap-8 py-3 w-max mx-auto rounded-2xl px-6`}
+  ${tw`flex bg-[#1E1D1C] gap-8 py-3 w-max mx-auto rounded-2xl px-6 `}
   ${({ $isFixed }) =>
-    $isFixed ? tw`fixed top-0 left-0 right-0 z-10` : tw`relative`}
+    $isFixed ? tw`fixed top-[15px] left-0 right-0 z-10` : tw`relative `}
 `;
 
 const Button = tw.button`relative flex flex-col items-center text-white`;

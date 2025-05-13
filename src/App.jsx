@@ -1,18 +1,22 @@
 import tw from "twin.macro";
 import { Nav } from "./components/Nav";
-import PersonCard from "./components/PersonCard";
-import ScrollableContent from "./components/ScrollableContent";
+import Header from "./components/Header";
+import Projects from "./components/Projects";
+import Workplaces from "./components/Workplaces";
 
-const Container = tw.div`bg-[#151412] h-[100dvh] pt-8`;
-const ContentContainer = tw.div` w-full h-full mt-24 flex`;
+const Container = tw.div`bg-[#151412]`;
+const ContentContainer = tw.div` w-full h-full mt-0 flex flex-col`;
 
 function App() {
   return (
     <Container>
-      <Nav />
+      {/* <div className="w-full bg-green-500 h-20 relative mt-4">
+        <Nav />
+      </div> */}
       <ContentContainer>
-        <PersonCard />
-        <ScrollableContent />
+        <Header />
+        <Projects />
+        <Workplaces />
       </ContentContainer>
     </Container>
   );
