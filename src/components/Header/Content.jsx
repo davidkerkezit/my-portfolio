@@ -1,4 +1,5 @@
 import React from "react";
+import { ContactIcon, DownloadIcon } from "../../assets/icons/icons";
 
 function Content() {
   const data = [
@@ -80,9 +81,28 @@ function Content() {
       </h1>
       <p className=" mt-5 text-lg leading-6 text-[#998F8F] w-[70%]">
         Passionate and self-motivated junior frontend developer with experience
-        in designing and building responsive web solutions.
+        in designing and building responsive web solutions. Passionate and
+        self-motivated junior frontend developer with experience in designing
+        and building responsive web solutions. Passionate and self-motivated
+        junior frontend developer with experience in designing and building
+        responsive web solutions. Passionate and
       </p>
-      <div className="mt-10">
+      <div className="flex gap-4 mb-2 mt-6">
+        <button className=" w-max border border-white text-white bg-[#161616] pl-1 pr-4 py-1 rounded-full flex gap-3 items-center hover:bg-zinc-800 ease-in-out duration-300 ">
+          <div className="bg-white  rounded-full  w-8 h-8 flex items-center justify-center">
+            <DownloadIcon color="black" width={15} height={15} />
+          </div>
+          Download
+        </button>
+        <button className=" w-max border border-white text-white bg-[#161616] pl-1 pr-6 py-1 rounded-full flex gap-3 items-center hover:bg-zinc-800 ease-in-out duration-300 ">
+          <div className="bg-white  rounded-full  w-8 h-8 flex items-center justify-center">
+            <ContactIcon color="black" width={15} height={15} />
+          </div>
+          Contact
+        </button>
+      </div>
+
+      {/* <div className="mt-0">
         <h4 className="text-lg font-extralight text-[#d8d8d8] italic">
           Worked with :
         </h4>
@@ -104,7 +124,7 @@ function Content() {
             );
           })}
         </div>
-      </div>
+      </div> */}
       <div className="flex-row flex gap-4 mt-10">
         {data.map((item) => {
           return (
