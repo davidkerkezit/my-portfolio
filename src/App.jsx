@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Workplaces from "./components/Workplaces";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 const Container = tw.div`bg-[#151412]`;
 const ContentContainer = tw.div` w-full h-full mt-0 flex flex-col`;
@@ -19,6 +20,7 @@ function App() {
         <Skills />
         <Projects />
         <Workplaces />
+        <Contact />
       </ContentContainer>
     </Container>
   );

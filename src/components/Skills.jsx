@@ -73,14 +73,20 @@ function Skills() {
   ];
 
   return (
-    <div className="  px-40 flex flex-col mt-10 items-center">
-      <h1 className="text-[60px] font-extrabold uppercase leading-[60px] text-white ">
+    <div className="  px-40 flex flex-col mt-10 items-center bg-[#1a1a18] pb-20">
+      <h1 className="text-[60px] font-extrabold uppercase leading-[60px] text-white -mt-7 ">
         Worked with
       </h1>
-      <div className="mt-16 flex flex-wrap  w-full  justify-center   gap-3 text-lg font-semibold  ">
+      <div className="mt-16 flex flex-wrap  w-full  justify-center   gap-3 text-lg font-semibold relative ">
         {languages.map(({ name, color, img }) => {
           return <Test key={name} name={name} color={color} img={img} />;
         })}
+        <div className="absolute w-full h-1 bg-gray-700 top-16" />
+        {/* <div
+          className="absolute left-0 w-1 h-52 bg-gray-700 -top-36
+      
+      "
+        /> */}
       </div>
     </div>
   );
