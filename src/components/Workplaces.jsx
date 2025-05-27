@@ -1,22 +1,14 @@
 import React from "react";
 import { LocationIcon } from "../assets/icons/icons";
+import tw from "twin.macro";
+
+const Container = tw.div`h-[100vh] px-40 flex flex-col  mt-14 bg-[#1a1a18]`;
+const Label = tw.h3`text-[60px] font-extrabold uppercase leading-[60px] text-white mb-10 -mt-7`;
 
 const Workplaces = () => {
-  const array = [
-    "Horahub",
-    "Open Gaming App",
-    "OG GO Game ",
-    "StepHero App",
-    "Musicshop",
-    "PureAqua",
-    "Horaverse",
-    "Horagames",
-  ];
   return (
-    <div className=" h-[100vh] px-40 flex flex-col mb-15 mt-14 bg-[#1a1a18]">
-      <h1 className="text-[60px] font-extrabold uppercase leading-[60px] text-white mb-10 -mt-7">
-        Experience <br />
-      </h1>
+    <Container>
+      <Label>Experience</Label>
       <div className=" w-max mx-auto">
         <div className="flex gap-6 ">
           <p className="bg-[#70706f] h-max text-sm font-light py-1 px-3">
@@ -83,7 +75,7 @@ const Workplaces = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

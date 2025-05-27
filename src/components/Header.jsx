@@ -1,15 +1,19 @@
 import React from "react";
 import PersonCard from "./Header/PersonCard";
 import Content from "./Header/Content";
+import tw from "twin.macro";
+
+const Container = tw.div`h-[100vh] w-full flex items-center`;
+const InnerContainer = tw.div`w-full flex justify-center items-center`;
 
 function Header() {
   return (
-    <div className="h-[100vh]   flex items-center w-full">
-      <div className="flex justify-center h-max  items-center w-full">
+    <Container>
+      <InnerContainer>
         <PersonCard />
         <Content />
-      </div>
-    </div>
+      </InnerContainer>
+    </Container>
   );
 }
 

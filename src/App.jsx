@@ -2,12 +2,13 @@ import tw from "twin.macro";
 import { Nav } from "./components/Nav";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
-import Workplaces from "./components/Workplaces";
 import Skills from "./components/Skills";
+import Workplaces from "./components/Workplaces";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
-const Container = tw.div`bg-[#151412]`;
-const ContentContainer = tw.div` w-full h-full mt-0 flex flex-col`;
+const Container = tw.div`bg-primary`;
+const ContentContainer = tw.div`w-full flex flex-col`;
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </div> */}
       <ContentContainer>
         <Header />
+        <About />
         <Skills />
         <Projects />
         <Workplaces />
