@@ -7,15 +7,16 @@ import Workplaces from "./components/Workplaces";
 import Contact from "./components/Contact";
 import About from "./components/About";
 
-const Container = tw.div`bg-primary`;
+const Container = tw.div`bg-primary overflow-x-hidden `;
 const ContentContainer = tw.div`w-full flex flex-col`;
 
 function App() {
   return (
     <Container>
-      {/* <div className="w-full bg-green-500 h-20 relative mt-4">
+      <div className="w-full bg-green-500  relative ">
         <Nav />
-      </div> */}
+      </div>
+
       <ContentContainer>
         <Header />
         <About />

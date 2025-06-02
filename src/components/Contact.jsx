@@ -10,8 +10,8 @@ function Contact() {
     setTest(false);
   };
   return (
-    <div className="py-10  flex w-1/2 mx-auto gap-10">
-      <div className="w-[60%] ">
+    <div className="pb-6 pt-6  w-full flex flex-col mx-4">
+      <div className="w-full ">
         <p
           style={{
             background: "linear-gradient(to right, #e64b10, #db9276)",
@@ -19,11 +19,11 @@ function Contact() {
             WebkitTextFillColor: "transparent",
             display: "inline-block",
           }}
-          className="uppercase font-semibold text-xl mb-5"
+          className="uppercase font-semibold text-2xl mb-3"
         >
           Do you have a project to discuss?
         </p>
-        <div className="flex gap-2.5 mb-6">
+        <div className="flex gap-2.5 mb-5">
           <p className="uppercase font-thin">Get in touch</p>
           <MessageBubbleIcon width={17} />
         </div>
@@ -35,29 +35,29 @@ function Contact() {
             </p>
           </div>
           <div>
-            <p className="text-xl uppercase font-light mr-5">Social Media</p>
+            <p className="text-xl uppercase font-light mr-12">Social Media</p>
             <div>{/* SOCIALS */}</div>
           </div>
         </div>
       </div>
-      <div className="w-[40%] ">
-        <p className="text-xl uppercase font-light mb-5">Contact Form</p>
-        <form action="" className="flex flex-col">
-          <label className="font-light text-sm mb-1 " htmlFor="">
+      <div className="w-[100%] mt-4 ">
+        <p className="text-xl uppercase font-light mb-2">Contact Form</p>
+        <form action="" className="flex flex-col w-[90%]">
+          <label className="font-light text-sm mb-z " htmlFor="">
             Name
           </label>
           <input
             className="bg-transparent border-[0.5px] rounded-md border-[#b3b3b3]"
             type="text"
           />
-          <label className="font-light text-sm mb-1 mt-2" htmlFor="">
+          <label className="font-light text-sm mb-1 mt-2.5" htmlFor="">
             Email
           </label>
           <input
             className="bg-transparent border-[0.5px] rounded-md border-[#b3b3b3]"
             type="text"
           />
-          <label className="font-light text-sm mb-1 mt-2" htmlFor="">
+          <label className="font-light text-sm mb-1 mt-2.5" htmlFor="">
             Message
           </label>
           <input
@@ -65,7 +65,7 @@ function Contact() {
             type="text"
           />
           <button
-            className="uppercase text-lg font-light mt-5 border-[0.5px] w-max px-12 py-2 mx-auto relative overflow-hidden "
+            className="uppercase text-base font-light mt-7 border-[0.5px] w-max px-10 py-1 mx-auto relative overflow-hidden "
             onMouseOver={hoverHandler}
             onMouseLeave={drugiHandler}
           >

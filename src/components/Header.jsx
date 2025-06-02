@@ -3,8 +3,8 @@ import PersonCard from "./Header/PersonCard";
 import Content from "./Header/Content";
 import tw from "twin.macro";
 
-const Container = tw.div`h-[100vh] w-full flex items-center`;
-const InnerContainer = tw.div`w-full flex justify-center items-center`;
+const Container = tw.div` w-full h-max  flex items-center`;
+const InnerContainer = tw.div`w-full mt-[70px]  flex md:flex-row flex-col justify-center items-center`;
 
 function Header() {
   return (

@@ -8,11 +8,10 @@ import {
 } from "../assets/icons/icons";
 import tw from "twin.macro";
 import styled from "styled-components";
+import Burger from "./Burger";
 
 const Container = styled.nav`
-  ${tw`flex bg-[#1E1D1C] gap-8 py-3 w-max mx-auto rounded-2xl px-6 `}
-  ${({ $isFixed }) =>
-    $isFixed ? tw`fixed top-[15px] left-0 right-0 z-10` : tw`relative `}
+  ${tw`flex justify-between  gap-8 py-4 mx-auto  px-5 w-full fixed z-50 `}
 `;
 
 const Button = tw.button`relative flex flex-col items-center text-white`;
@@ -48,12 +47,17 @@ export const Nav = () => {
 
   return (
     <Container $isFixed={isFixed}>
-      {navItems.map(({ name, icon: Icon, id }) => (
+      <div className="absolute w-full h-full bg-[#1e1d1ce9] backdrop-blur-lg  top-0 left-0" />
+      <p className="z-10">DK </p>
+      <Burger />
+      {/* {navItems.map(({ name, icon: Icon, id }) => (
         <Button key={id} aria-label={name} className="group">
           <Icon width={24} height={24} />
           <Label>{name}</Label>
         </Button>
-      ))}
+      ))} */}
     </Container>
   );
 };
+// ${({ $isFixed }) =>
+//   $isFixed ? tw`fixed top-[15px] left-0 right-0 z-10` : tw`relative `}
