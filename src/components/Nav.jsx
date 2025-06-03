@@ -11,7 +11,7 @@ import styled from "styled-components";
 import Burger from "./Burger";
 
 const Container = styled.nav`
-  ${tw`flex justify-between  gap-8 py-4 mx-auto  px-5 w-full fixed z-50 `}
+  ${tw`flex justify-between  gap-8 py-4 mx-auto  px-5 w-full fixed top-0 z-50 `}
 `;
 
 const Button = tw.button`relative flex flex-col items-center text-white`;

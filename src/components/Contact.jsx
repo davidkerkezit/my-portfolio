@@ -10,7 +10,7 @@ function Contact() {
     setTest(false);
   };
   return (
-    <div className="pb-6 pt-6  w-full flex flex-col mx-4">
+    <div className="pb-6 pt-6  w-full flex mx-auto flex-col lg:flex-row px-4 max-w-[800px] lg:max-w-[1000px] ">
       <div className="w-full ">
         <p
           style={{
@@ -19,11 +19,11 @@ function Contact() {
             WebkitTextFillColor: "transparent",
             display: "inline-block",
           }}
-          className="uppercase font-semibold text-2xl mb-3"
+          className="uppercase font-semibold text-2xl mb-3 lg:mb-6"
         >
           Do you have a project to discuss?
         </p>
-        <div className="flex gap-2.5 mb-5">
+        <div className="flex gap-2.5 mb-5 lg:mb-10">
           <p className="uppercase font-thin">Get in touch</p>
           <MessageBubbleIcon width={17} />
         </div>
@@ -40,9 +40,9 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="w-[100%] mt-4 ">
+      <div className="w-[100%] mt-4 lg:mt-0 ">
         <p className="text-xl uppercase font-light mb-2">Contact Form</p>
-        <form action="" className="flex flex-col w-[90%]">
+        <form action="" className="flex flex-col w-[90%] ">
           <label className="font-light text-sm mb-z " htmlFor="">
             Name
           </label>

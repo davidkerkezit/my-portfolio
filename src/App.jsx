@@ -7,8 +7,8 @@ import Workplaces from "./components/Workplaces";
 import Contact from "./components/Contact";
 import About from "./components/About";
 
-const Container = tw.div`bg-primary overflow-x-hidden `;
-const ContentContainer = tw.div`w-full flex flex-col`;
+const Container = tw.div`bg-primary overflow-x-hidden border border-orange-500 sm:border-red-500 md:border-green-500 lg:border-yellow-500 xl:border-black 2xl:border-purple-500 `;
+const ContentContainer = tw.div`w-full flex flex-col `;
 
 function App() {
   return (
