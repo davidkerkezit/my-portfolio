@@ -117,3 +117,30 @@ export const projects = [
   "Horaverse",
   "Horagames",
 ];
+
+export const workplaces = [
+  {
+    date: "2024 - Present",
+    position: "Frontend Developer (Full Time)",
+    location: "Hora Games",
+    link: "https://www.linkedin.com/company/horagames/",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit 
+      quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo
+       necessitatibus atque quia commodi dolorem! Ipsa, mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+       Suscipit quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo necessitatibus 
+       atque quia commodi dolorem! Ipsa, mollitia? dipisicing elit. Suscipit quasi excepturi amet illum similique sequi quaerat,
+        quod quisquam, ullam sit laborum fugit illo necessitatibus atque quia commodi dolorem! Ipsa, mollitia?`,
+  },
+  {
+    date: "2023",
+    position: "Frontend Developer (Intermediate)",
+    location: "Positive Tech IT",
+    link: "https://positivetechit.com/",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit 
+      quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo
+       necessitatibus atque quia commodi dolorem! Ipsa, mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+       Suscipit quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo necessitatibus 
+       atque quia commodi dolorem! Ipsa, mollitia? dipisicing elit. Suscipit quasi excepturi amet illum similique sequi quaerat,
+        quod quisquam, ullam sit laborum fugit illo necessitatibus atque quia commodi dolorem! Ipsa, mollitia?`,
+  },
+];
