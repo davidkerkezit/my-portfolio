@@ -5,9 +5,9 @@ const Button = tw.button`w-max border border-white text-white bg-[#161616] pl-[2
 const IconWrapper = tw.div`bg-white  rounded-full  w-8 h-8 flex items-center justify-center`;
 const LabelText = tw.p`text-sm`;
 
-function RoundedButton({ label, icon }) {
+function RoundedButton({ label, icon, func }) {
   return (
-    <Button>
+    <Button onClick={func}>
       <IconWrapper>{icon}</IconWrapper>
       <LabelText>{label}</LabelText>
     </Button>

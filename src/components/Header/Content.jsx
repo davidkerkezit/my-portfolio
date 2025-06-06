@@ -14,7 +14,16 @@ const HighlightContainer = tw.div`rounded-md p-2.5 `;
 const NumberText = tw.p`text-[30px] lg:text-[60px] font-medium `;
 const HighlightText = tw.p`uppercase lg:text-base  text-[14px] font-light leading-3`;
 
-function Content() {
+function Content({ contactRef }) {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/DavidCV.pdf";
+    link.download = "DavidCV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <Container>
       <PositionText>
@@ -32,10 +41,14 @@ function Content() {
         <RoundedButton
           label="Download"
           icon={<DownloadIcon color="black" width={15} height={15} />}
+          func={handleDownload}
         />
         <RoundedButton
           label="Contact"
           icon={<ContactIcon color="black" width={15} height={15} />}
+          func={() => {
+            contactRef.current.scrollIntoView({ behavior: "smooth" });
+          }}
         />
       </ButtonsContainer>
       <HighlightsContainer>

@@ -120,7 +120,7 @@ export const projects = [
 
 export const workplaces = [
   {
-    date: "2024 - Present",
+    date: "Mar 2024 - Present",
     position: "Frontend Developer (Full Time)",
     location: "Hora Games",
     link: "https://www.linkedin.com/company/horagames/",
@@ -132,7 +132,7 @@ export const workplaces = [
         quod quisquam, ullam sit laborum fugit illo necessitatibus atque quia commodi dolorem! Ipsa, mollitia?`,
   },
   {
-    date: "2023",
+    date: "Oct 2023 - Nov 2023",
     position: "Frontend Developer (Intermediate)",
     location: "Positive Tech IT",
     link: "https://positivetechit.com/",

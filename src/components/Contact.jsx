@@ -31,7 +31,7 @@ const Button = tw.button`uppercase text-base font-light mt-7 border border-white
 const ButtonOverlay = tw.div`w-[1000px] h-[1000px] absolute rotate-45 bg-orange-500 duration-300 ease-in-out`;
 const ButtonText = tw.p`z-10 relative`;
 
-function Contact() {
+function Contact({ contactRef }) {
   const [test, setTest] = useState(false);
   const hoverHandler = () => {
     setTest(true);
@@ -41,7 +41,7 @@ function Contact() {
   };
 
   return (
-    <Container>
+    <Container ref={contactRef}>
       <LeftSection>
         <Title
           style={{

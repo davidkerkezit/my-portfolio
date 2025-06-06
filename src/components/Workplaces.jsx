@@ -3,8 +3,8 @@ import { LocationIcon } from "../assets/icons/icons";
 import tw from "twin.macro";
 import { workplaces } from "../utils/config";
 
-const Container = tw.div`flex flex-col  mt-14 bg-[#1a1a18]  px-4  pb-8`;
-const Label = tw.h3`text-[40px] xl:text-[50px] font-extrabold uppercase leading-[60px] text-white mb-4 -mt-7`;
+const Container = tw.div`flex flex-col  mt-14 bg-[#1a1a18]  px-4  lg:px-24  pb-8`;
+const Label = tw.h3`text-[40px] xl:text-[60px] font-extrabold uppercase leading-[60px] text-white mb-4 lg:mb-10 -mt-7`;
 const ExperiencesContainer = tw.div`w-full mx-auto`;
 const SingleExperienceContainer = tw.div`flex gap-6`;
 const DateContainer = tw.div` hidden lg:flex w-[200px]  justify-end`;
@@ -47,6 +47,10 @@ const Workplaces = () => {
                     {item.location}
                   </LocationText>
                 </LocationContainer>
+                <p className="bg-[#70706f] w-max px-3 text-sm py-1 font-light lg:hidden">
+                  {item.date}
+                </p>
+
                 <Description className="mb-4">{item.description}</Description>
               </AboutContainer>
             </SingleExperienceContainer>
