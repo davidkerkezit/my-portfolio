@@ -1,15 +1,22 @@
 import { GithubIcon, GitlabIcon, LinkedinIcon } from "../assets/icons/icons";
+// Languages
 import react from "../assets/logos/react.png";
 import astro from "../assets/logos/astro.png";
 import css from "../assets/logos/css.png";
 import javascript from "../assets/logos/javascript.png";
 import mongodb from "../assets/logos/mongodb.png";
 import node from "../assets/logos/node.png";
-
 import next from "../assets/logos/next.png";
 import styled from "../assets/logos/styled.png";
 import tailwind from "../assets/logos/tailwind.png";
 import typescript from "../assets/logos/typescript.png";
+// projects
+import musicshop from "../assets/projects/musicshop.png";
+import pureaqua from "../assets/projects/pureaqua.png";
+import opengamingweb from "../assets/projects/opengamingweb.png";
+import opengamingapp from "../assets/projects/opengamingapp.png";
+import opengaminggame from "../assets/projects/opengaminggame.png";
+import stephero from "../assets/projects/stephero.png";
 
 export const socials = [
   {
@@ -107,17 +114,6 @@ export const skills = [
   },
 ];
 
-export const projects = [
-  "Horahub",
-  "Open Gaming App",
-  "OG GO Game ",
-  "StepHero App",
-  "Musicshop",
-  "PureAqua",
-  "Horaverse",
-  "Horagames",
-];
-
 export const workplaces = [
   {
     date: "Mar 2024 - Present",
@@ -142,5 +138,88 @@ export const workplaces = [
        Suscipit quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo necessitatibus 
        atque quia commodi dolorem! Ipsa, mollitia? dipisicing elit. Suscipit quasi excepturi amet illum similique sequi quaerat,
         quod quisquam, ullam sit laborum fugit illo necessitatibus atque quia commodi dolorem! Ipsa, mollitia?`,
+  },
+];
+
+export const projects = [
+  {
+    name: "Music Shop Website",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: musicshop,
+    languages: [next, , tailwind, typescript],
+    isAvailable: true,
+    link: "",
+  },
+  {
+    name: "Stephero App (IOS)",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: stephero,
+    languages: [react],
+    isAvailable: false,
+    link: "",
+  },
+  {
+    name: "Open Gaming (Telegram App)",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: opengamingapp,
+    languages: [react, tailwind, styled],
+    isAvailable: true,
+    link: "",
+  },
+  {
+    name: "OG GO (Telegram Game)",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: opengaminggame,
+    languages: [react, tailwind, styled],
+    isAvailable: true,
+    link: "",
+  },
+  {
+    name: "Pure Aqua Website",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: pureaqua,
+    languages: [next, tailwind, typescript],
+    isAvailable: true,
+    link: "",
+  },
+  {
+    name: "Hora Hub Website",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: "",
+    languages: [react, tailwind, styled],
+    isAvailable: false,
+    link: "",
+  },
+  {
+    name: "Horaverse Website",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: "",
+    languages: [astro, tailwind],
+    isAvailable: false,
+    link: "",
+  },
+  {
+    name: "Open Gaming Website",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
+    eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    image: opengamingweb,
+    languages: [astro, tailwind],
+    isAvailable: true,
+    link: "",
   },
 ];
