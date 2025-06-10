@@ -17,6 +17,8 @@ import opengamingweb from "../assets/projects/opengamingweb.png";
 import opengamingapp from "../assets/projects/opengamingapp.png";
 import opengaminggame from "../assets/projects/opengaminggame.png";
 import stephero from "../assets/projects/stephero.png";
+import horahub from "../assets/projects/horahub.png";
+import horaverse from "../assets/projects/horaverse.png";
 
 export const socials = [
   {
@@ -150,7 +152,7 @@ export const projects = [
     image: musicshop,
     languages: [next, , tailwind, typescript],
     isAvailable: true,
-    link: "",
+    link: "https://musicshop-two.vercel.app/",
   },
   {
     name: "Stephero App (IOS)",
@@ -170,7 +172,7 @@ export const projects = [
     image: opengamingapp,
     languages: [react, tailwind, styled],
     isAvailable: true,
-    link: "",
+    link: "https://t.me/OGAppBot/app?startapp=5a414e8a3d88",
   },
   {
     name: "OG GO (Telegram Game)",
@@ -180,7 +182,7 @@ export const projects = [
     image: opengaminggame,
     languages: [react, tailwind, styled],
     isAvailable: true,
-    link: "",
+    link: "https://t.me/OGAppBot/app?startapp=5a414e8a3d88",
   },
   {
     name: "Pure Aqua Website",
@@ -190,14 +192,14 @@ export const projects = [
     image: pureaqua,
     languages: [next, tailwind, typescript],
     isAvailable: true,
-    link: "",
+    link: "https://pureaqua.rs/",
   },
   {
     name: "Hora Hub Website",
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
       eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
-    image: "",
+    image: horahub,
     languages: [react, tailwind, styled],
     isAvailable: false,
     link: "",
@@ -207,7 +209,7 @@ export const projects = [
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
       eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
-    image: "",
+    image: horaverse,
     languages: [astro, tailwind],
     isAvailable: false,
     link: "",
@@ -220,6 +222,6 @@ export const projects = [
     image: opengamingweb,
     languages: [astro, tailwind],
     isAvailable: true,
-    link: "",
+    link: "https://opengaming.network",
   },
 ];
