@@ -30,12 +30,14 @@ function Content({ contactRef }) {
         Frontend <br /> <PositionTextSpan>Developer</PositionTextSpan>
       </PositionText>
       <AboutText>
-        Passionate and self-motivated junior frontend developer with experience
-        in designing and building responsive web solutions. Passionate and
-        self-motivated junior frontend developer with experience in designing
-        and building responsive web solutions. Passionate and self-motivated
-        junior frontend developer with experience in designing and building
-        responsive web solutions. Passionate and
+        I'm a self-driven Frontend Developer with a passion for both visual
+        design and technical logic. While React is my core tool, I’m always
+        ready to dive into new technologies — from frameworks like Next.js to
+        mobile apps with React Native, or backend tasks with Express. I've
+        worked on a wide range of projects, from websites and apps to games,
+        always adapting fast and delivering clean, effective solutions. My goal
+        is to build not just beautiful, but smart and scalable digital
+        experiences.{" "}
       </AboutText>
       <ButtonsContainer>
         <RoundedButton

@@ -122,33 +122,21 @@ export const workplaces = [
     position: "Frontend Developer (Full Time)",
     location: "Hora Games",
     link: "https://www.linkedin.com/company/horagames/",
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit 
-      quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo
-       necessitatibus atque quia commodi dolorem! Ipsa, mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-       Suscipit quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo necessitatibus 
-       atque quia commodi dolorem! Ipsa, mollitia? dipisicing elit. Suscipit quasi excepturi amet illum similique sequi quaerat,
-        quod quisquam, ullam sit laborum fugit illo necessitatibus atque quia commodi dolorem! Ipsa, mollitia?`,
+    description: `Currently, I work as a Frontend Developer at Hora Games, a company based in Novi Sad known for the popular crypto game Crypto Idle Miner. My work focuses on developing a variety of web projects using React and Astro, including a challenging React-based game and application for the Telegram platform inspired by Monopoly Go. This project pushed me to creatively solve complex architectural and gameplay problems. Additionally, I contribute to an iOS app built with React Native that tracks user steps, integrating native features for smooth performance. This role has taught me to write cleaner, more maintainable code, think critically and strategically, and adapt quickly to new challenges. Working in this fast-paced environment has sharpened my problem-solving skills and ability to deliver high-quality, scalable digital experiences.`,
   },
   {
     date: "Oct 2023 - Nov 2023",
     position: "Frontend Developer (Intermediate)",
     location: "Positive Tech IT",
     link: "https://positivetechit.com/",
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit 
-      quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo
-       necessitatibus atque quia commodi dolorem! Ipsa, mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-       Suscipit quasi excepturi amet illum similique sequi quaerat, quod quisquam, ullam sit laborum fugit illo necessitatibus 
-       atque quia commodi dolorem! Ipsa, mollitia? dipisicing elit. Suscipit quasi excepturi amet illum similique sequi quaerat,
-        quod quisquam, ullam sit laborum fugit illo necessitatibus atque quia commodi dolorem! Ipsa, mollitia?`,
+    description: `During my internship at Positive Tech IT in Novi Sad, I had the opportunity to work on a complex project that allowed me to showcase my skills and grow as a developer. I was assigned to develop a webshop for selling water purifiers using Next.js, TypeScript, GraphQL, and Shopify. This experience gave me hands-on practice with modern technologies and e-commerce development, enhancing my understanding of full-stack workflows and improving my ability to deliver high-quality, maintainable code. The internship was a valuable step in transitioning from self-taught projects to a professional environment, preparing me for real-world challenges`,
   },
 ];
 
 export const projects = [
   {
     name: "Music Shop Website",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `A full-stack webshop featuring complete user shopping experience with product browsing, purchasing, and customer contact functionality. Built with comprehensive admin panel for product management, order processing, and customer communication. Demonstrates end-to-end e-commerce development skills with both user-facing features and backend administration.`,
     image: musicshop,
     languages: [next, , tailwind, typescript],
     isAvailable: true,
@@ -156,9 +144,8 @@ export const projects = [
   },
   {
     name: "Stephero App (IOS)",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `
+A React Native health application that monitors user activity including steps, distance, and floors climbed. Features gamified challenges and social competition elements to motivate users toward increased physical activity. Integrates native iOS health APIs to provide accurate tracking while creating an engaging, competitive fitness experience.`,
     image: stephero,
     languages: [react],
     isAvailable: false,
@@ -166,9 +153,7 @@ export const projects = [
   },
   {
     name: "Open Gaming (Telegram App)",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `A React-based Telegram application featuring task-based gameplay connected to partner games and applications. Includes social features like friend connections, point collection systems, integrated chat functionality, and push notifications. Built to create an engaging ecosystem linking multiple gaming platforms within the Telegram environment.`,
     image: opengamingapp,
     languages: [react, tailwind, styled],
     isAvailable: true,
@@ -176,9 +161,7 @@ export const projects = [
   },
   {
     name: "OG GO (Telegram Game)",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `React-based mini-game featuring money collection, police evasion, bank heists, and city exploration mechanics. Players progress through different locations while building their criminal empire, with an integrated shop for purchasing upgrades and items. Delivers engaging strategic gameplay optimized for the Telegram platform.`,
     image: opengaminggame,
     languages: [react, tailwind, styled],
     isAvailable: true,

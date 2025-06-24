@@ -18,7 +18,6 @@ function App() {
       <div className="w-full bg-green-500  relative ">
         <Nav />
       </div>
-
       <ContentContainer>
         <Header contactRef={contactRef} />
         <About />

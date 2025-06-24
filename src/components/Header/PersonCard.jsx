@@ -22,8 +22,9 @@ function PersonCard() {
         <div>
           <NameText>David Kerkez</NameText>
           <AboutText>
-            A Frontend Developer crafting engaging, user-friendly web
-            experiences through clean code and creative solutions.
+            Creative Frontend Developer crafting intuitive and dynamic user
+            interfaces with React — detail-oriented, passionate about clean
+            code, and driven by seamless user experiences.
           </AboutText>
           <SocialsContainer>
             {socials.map((item) => {
