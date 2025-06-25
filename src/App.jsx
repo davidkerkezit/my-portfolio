@@ -12,18 +12,24 @@ const Container = tw.div`bg-primary overflow-x-hidden  border-orange-500 sm:bord
 const ContentContainer = tw.div`w-full flex flex-col `;
 
 function App() {
+  const aboutRef = useRef();
+  const skillsRef = useRef();
+  const projectsRef = useRef();
+  const experienceRef = useRef();
   const contactRef = useRef();
   return (
     <Container>
       <div className="w-full bg-green-500  relative ">
-        <Nav />
+        <Nav
+          refs={{ aboutRef, skillsRef, projectsRef, experienceRef, contactRef }}
+        />
       </div>
       <ContentContainer>
-        <Header contactRef={contactRef} />
+        <Header contactRef={contactRef} aboutRef={aboutRef} />
         <About />
-        <Skills />
-        <Projects />
-        <Workplaces />
+        <Skills skillsRef={skillsRef} />
+        <Projects projectsRef={projectsRef} />
+        <Workplaces experienceRef={experienceRef} />
         <Contact contactRef={contactRef} />
       </ContentContainer>
     </Container>

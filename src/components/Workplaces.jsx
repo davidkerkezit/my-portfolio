@@ -19,9 +19,9 @@ const LocationContainer = tw.div`flex gap-2 items-center`;
 const LocationText = tw.a`text-lg`;
 const Description = tw.div`pb-1 font-light w-full `;
 
-const Workplaces = () => {
+const Workplaces = ({ experienceRef }) => {
   return (
-    <Container>
+    <Container ref={experienceRef}>
       <Label>Experience</Label>
       <ExperiencesContainer>
         {workplaces.map((item) => {

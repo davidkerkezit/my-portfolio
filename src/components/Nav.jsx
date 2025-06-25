@@ -11,7 +11,7 @@ import styled from "styled-components";
 import Burger from "./Burger";
 
 const Container = styled.nav`
-  ${tw`flex justify-between  gap-8 py-4 mx-auto  px-5 w-full fixed top-0 z-50 `}
+  ${tw`flex justify-between items-center  gap-8 py-0 mx-auto  px-5 w-full fixed top-0 z-50 h-[55px] `}
 `;
 
 const Button = tw.button`relative flex flex-col items-center text-white`;
@@ -31,7 +31,8 @@ const navItems = [
   { name: "Contacts", icon: ContactIcon, id: "nav-contacts" },
 ];
 
-export const Nav = () => {
+export const Nav = ({ refs }) => {
+  const { aboutRef, skillsRef, projectsRef, experienceRef, contactRef } = refs;
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
@@ -44,12 +45,56 @@ export const Nav = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const navItems = [
+    {
+      name: "About me",
+      ref: aboutRef,
+    },
+    {
+      name: "Skills",
+      ref: skillsRef,
+    },
+    {
+      name: "Projects",
+      ref: projectsRef,
+    },
+    {
+      name: "Experience",
+      ref: experienceRef,
+    },
+    {
+      name: "Contact",
+      ref: contactRef,
+    },
+  ];
   return (
     <Container $isFixed={isFixed}>
       <div className="absolute w-full h-full bg-[#1e1d1ce9] backdrop-blur-lg  top-0 left-0" />
       <p className="z-10">DK </p>
       <Burger />
+      <div className="z-10 h-full">
+        {navItems.map((item) => {
+          return (
+            <button
+              className="text-white uppercase font-thin px-4 hover:bg-white/5 h-full border-b-2 border-b-transparent hover:border-b-white/40 duration-300 ease-in-out"
+              key={item.name}
+              onClick={() => {
+                const element = item.ref.current;
+                if (!element) return;
+
+                const top =
+                  element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                  top: top - 80,
+                  behavior: "smooth",
+                });
+              }}
+            >
+              {item.name}
+            </button>
+          );
+        })}
+      </div>
       {/* {navItems.map(({ name, icon: Icon, id }) => (
         <Button key={id} aria-label={name} className="group">
           <Icon width={24} height={24} />

@@ -7,10 +7,10 @@ const Container = tw.div` flex flex-col mt-6 items-center bg-[#1a1a18] pb-14 px-
 const Label = tw.h3`text-[40px] xl:text-[50px] font-extrabold uppercase leading-[60px] text-white -mt-8  `;
 const SkillsContainer = tw.div`mt-3 flex flex-wrap  w-full  justify-center gap-1.5 text-lg font-semibold `;
 
-function Skills() {
+function Skills({ skillsRef }) {
   return (
     <Container>
-      <Label>Worked with</Label>
+      <Label ref={skillsRef}>Worked with</Label>
       <SkillsContainer>
         {skills.map(({ name, img }) => {
           return <SingleSkill key={name} name={name} img={img} />;

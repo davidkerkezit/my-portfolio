@@ -8,9 +8,9 @@ const Label = tw.h3`text-[40px] xl:text-[60px] font-extrabold uppercase leading-
 const LabelSpan = tw.span`text-[#3B393A]`;
 const ProjectsContainer = tw.div` flex flex-wrap  justify-center items-center w-full gap-1.5 mt-5 lg:mt-10  lg:gap-5`;
 
-const Projects = () => {
+const Projects = ({ projectsRef }) => {
   return (
-    <Container>
+    <Container ref={projectsRef}>
       <Label>Projects</Label>
       <ProjectsContainer>
         {projects.map((item, index) => {
