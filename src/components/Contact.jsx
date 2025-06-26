@@ -7,7 +7,7 @@ import {
 } from "../assets/icons/icons";
 import tw from "twin.macro";
 
-const Container = tw.div`pb-8 lg:pb-28 pt-8 lg:pt-14 w-full flex mx-auto flex-col lg:flex-row px-4 max-w-[800px] lg:max-w-[1000px]`;
+const Container = tw.div`md:pb-8 lg:pb-28 pt-8 lg:pt-14 w-full flex mx-auto flex-col lg:flex-row px-4 max-w-[800px] lg:max-w-[1000px] pb-20`;
 const LeftSection = tw.div`w-full `;
 const Title = tw.p`uppercase font-semibold text-2xl mb-3 lg:mb-6`;
 const SubTitleContainer = tw.div`flex gap-2.5 mb-5 lg:mb-8`;

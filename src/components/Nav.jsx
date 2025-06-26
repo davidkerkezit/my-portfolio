@@ -11,7 +11,7 @@ import styled from "styled-components";
 import Burger from "./Burger";
 
 const Container = styled.nav`
-  ${tw`flex justify-between items-center  gap-8 py-0 mx-auto  px-5 w-full fixed top-0 z-50 h-[55px] `}
+  ${tw`flex justify-between items-center  gap-8 py-0 mx-auto  px-5 w-full fixed md:top-0 bottom-0 z-50 h-[55px] `}
 `;
 
 const Button = tw.button`relative flex flex-col items-center text-white`;
@@ -49,31 +49,36 @@ export const Nav = ({ refs }) => {
     {
       name: "About me",
       ref: aboutRef,
+      icon: HomeIcon,
     },
     {
       name: "Skills",
       ref: skillsRef,
+      icon: UserIcon,
     },
     {
       name: "Projects",
       ref: projectsRef,
+      icon: ProjectsIcon,
     },
     {
       name: "Experience",
       ref: experienceRef,
+      icon: BriefcaseIcon,
     },
     {
       name: "Contact",
       ref: contactRef,
+      icon: ContactIcon,
     },
   ];
   return (
-    <Container $isFixed={isFixed}>
+    <Container>
       <div className="absolute w-full h-full bg-[#1e1d1ce9] backdrop-blur-lg  top-0 left-0" />
-      <p className="z-10">DK </p>
-      <Burger />
-      <div className="z-10 h-full">
+      <p className="z-10 hidden md:block">DK </p>
+      <div className="z-10 h-full flex flex-row justify-center items-centers w-full md:justify-end gap-2">
         {navItems.map((item) => {
+          const Component = item.icon;
           return (
             <button
               className="text-white uppercase font-thin px-4 hover:bg-white/5 h-full border-b-2 border-b-transparent hover:border-b-white/40 duration-300 ease-in-out"
@@ -90,7 +95,10 @@ export const Nav = ({ refs }) => {
                 });
               }}
             >
-              {item.name}
+              <div className="md:block hidden"> {item.name}</div>
+              <div className="md:hidden block">
+                <Component />
+              </div>
             </button>
           );
         })}

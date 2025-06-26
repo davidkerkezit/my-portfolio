@@ -169,9 +169,7 @@ A React Native health application that monitors user activity including steps, d
   },
   {
     name: "Pure Aqua Website",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `A modern e-commerce platform built with Next.js and TypeScript, featuring seamless Shopify integration via GraphQL for product management and transactions. Combines full shopping functionality with an integrated blog system for content marketing. Demonstrates advanced full-stack development with headless commerce architecture.`,
     image: pureaqua,
     languages: [next, tailwind, typescript],
     isAvailable: true,
@@ -179,9 +177,7 @@ A React Native health application that monitors user activity including steps, d
   },
   {
     name: "Hora Hub Website",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `More info soon.`,
     image: horahub,
     languages: [react, tailwind, styled],
     isAvailable: false,
@@ -189,9 +185,7 @@ A React Native health application that monitors user activity including steps, d
   },
   {
     name: "Horaverse Website",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-      eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `A static presentation website built with Astro and Tailwind CSS showcasing a futuristic concept called HoraVerse. Features modern, responsive design optimized for performance and user engagement. Demonstrates advanced static site generation skills with focus on visual storytelling and concept presentation.`,
     image: horaverse,
     languages: [astro, tailwind],
     isAvailable: false,
@@ -199,9 +193,7 @@ A React Native health application that monitors user activity including steps, d
   },
   {
     name: "Open Gaming Website",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Iusto repellendus maxime accusamus quaerat, nihil ullam quo 
-    eum esse atque recusandae culpa odio et dolorem illum, labore aperiam ratione fuga facere?`,
+    description: `A static presentation website developed with Astro showcasing the OpenGaming concept and vision.`,
     image: opengamingweb,
     languages: [astro, tailwind],
     isAvailable: true,
