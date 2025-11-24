@@ -17,6 +17,9 @@ import emailjs from "../assets/logos/emailjs.png";
 import watermelondb from "../assets/logos/watermelondb.png";
 import zustand from "../assets/logos/zustand.png";
 import graphql from "../assets/logos/graphql.png";
+import rest from "../assets/logos/rest.png";
+import cssmodules from "../assets/logos/cssmodules.png";
+import sass from "../assets/logos/sass.png";
 
 // projects
 import musicshop from "../assets/projects/musicshop.png";
@@ -113,14 +116,66 @@ export const skills = [
     img: mongodb,
   },
   {
+    name: "WatermelonDB",
+    color: "#E98ED0",
+    img: watermelondb,
+  },
+  {
+    name: "AWS S3",
+    color: "#E98ED0",
+    img: awss3,
+  },
+  {
+    name: "GraphQL",
+    color: "#E98ED0",
+    img: graphql,
+  },
+  {
+    name: "Rest API",
+    color: "#E98ED0",
+    img: rest,
+  },
+  {
     name: "Tailwind",
     color: "#37B7F0",
     img: tailwind,
   },
   {
+    name: "SASS",
+    color: "#E98ED0",
+    img: sass,
+  },
+  {
     name: "Styled",
     color: "#E98ED0",
     img: styled,
+  },
+  {
+    name: "CSS Modules",
+    color: "#E98ED0",
+    img: cssmodules,
+  },
+
+  {
+    name: "Redux",
+    color: "#E98ED0",
+    img: redux,
+  },
+
+  {
+    name: "Zustand",
+    color: "#E98ED0",
+    img: zustand,
+  },
+  {
+    name: "Email JS",
+    color: "#E98ED0",
+    img: emailjs,
+  },
+  {
+    name: "Framer Motion",
+    color: "#E98ED0",
+    img: framermotion,
   },
 ];
 
