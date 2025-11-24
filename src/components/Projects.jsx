@@ -7,7 +7,7 @@ import { sleep } from "../utils/helpers";
 
 const Container = tw.div`xl:mx-20 md:mx-4 mx-2 flex flex-col -mt-8`;
 const Label = tw.h3`text-[40px] xl:text-[60px] font-extrabold uppercase leading-[60px] text-white text-center`;
-const ProjectsContainer = tw.div`relative flex flex-wrap transition-all duration-1000  items-center w-full gap-1.5 mt-5 lg:mt-10  lg:gap-5`;
+const ProjectsContainer = tw.div`relative flex flex-wrap transition-all duration-300  items-center w-full gap-1.5 mt-5 lg:mt-10  lg:gap-5`;
 
 const Projects = ({ projectsRef }) => {
   function useQuery() {
@@ -15,7 +15,6 @@ const Projects = ({ projectsRef }) => {
   }
   const query = useQuery();
   const projectIdFromQuery = query.get("projectId");
-
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [isInitialRender, setIsInitialRender] = useState(false);
   const [selectedProjectOffset, setSelectedProjectOffset] = useState({
@@ -32,7 +31,7 @@ const Projects = ({ projectsRef }) => {
   const lastSelectedPosition = useRef({ top: 0 });
 
   const selectedProject = projects.find((p) => p.id === selectedProjectId);
-
+  const [isFixed, setIsFixed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const clickedProjectRef = useRef(null);
   const singleProjectRef = useRef(null);
@@ -42,33 +41,33 @@ const Projects = ({ projectsRef }) => {
     setIsLoading(true);
 
     if (selectedProjectId) {
-      if (projectsRef.current) {
-        const top =
-          projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: top - 50,
-          behavior: "smooth",
-        });
-      }
+      // if (projectsRef.current) {
+      //   const top =
+      //     projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
+      //   window.scrollTo({
+      //     top: top - 50,
+      //     behavior: "smooth",
+      //   });
+      // }
       setIsFloating(true);
       setVisibleProjects(projects);
       await sleep(500);
 
-      if (projectsRef.current) {
-        const top =
-          projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: top + selectedProjectStartOffset.top - 100,
-          behavior: "smooth",
-        });
-      }
+      // if (projectsRef.current) {
+      //   const top =
+      //     projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
+      //   window.scrollTo({
+      //     top: top + selectedProjectStartOffset.top - 100,
+      //     behavior: "smooth",
+      //   });
+      // }
       setSelectedProjectOffset({
         left: selectedProjectStartOffset.left,
         top: selectedProjectStartOffset.top,
       });
-      await sleep(200);
+      await sleep(300);
       setIsListHidden(false);
-      await sleep(400);
+      await sleep(300);
       setSelectedProjectId(null);
       setIsLoading(false);
     } else {
@@ -78,14 +77,14 @@ const Projects = ({ projectsRef }) => {
       }
 
       const rect = clickedProjectRef.current.getBoundingClientRect();
-      if (projectsRef.current) {
-        const top =
-          projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: top - 50,
-          behavior: "smooth",
-        });
-      }
+      // if (projectsRef.current) {
+      //   const top =
+      //     projectsRef.current.getBoundingClientRect().top + window.pageYOffset;
+      //   window.scrollTo({
+      //     top: top - 50,
+      //     behavior: "smooth",
+      //   });
+      // }
       const parentRect = projectsRef.current?.getBoundingClientRect();
       const relativeLeft = rect.left - (parentRect?.left || 0);
       const relativeTop = rect.top - (parentRect?.top || 0) - 100;
@@ -100,7 +99,7 @@ const Projects = ({ projectsRef }) => {
 
       const animTime =
         projects.find((p) => p.id === Number(id))?.floatAnimTime || 800;
-      await sleep(animTime);
+      await sleep(300);
 
       setIsFloating(false);
       setVisibleProjects([]);
@@ -118,6 +117,24 @@ const Projects = ({ projectsRef }) => {
   useEffect(() => {
     selectProjectHandler(projectIdFromQuery);
   }, [projectIdFromQuery]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!singleProjectRef.current) return;
+      const rect = singleProjectRef.current.getBoundingClientRect();
+
+      if (rect.top <= 50 && rect.bottom > 140) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // inicijalno
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Container ref={projectsRef}>
@@ -154,6 +171,7 @@ const Projects = ({ projectsRef }) => {
             isFloating={isFloating}
             isSingleProject={true}
             containerRef={singleProjectRef}
+            isFixed={isFixed}
           />
         )}
       </ProjectsContainer>

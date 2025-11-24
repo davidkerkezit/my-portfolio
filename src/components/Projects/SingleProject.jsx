@@ -39,17 +39,19 @@ const VisitProjectContainer = styled.div(({ $isSingleProjectOpen }) => [
 const VisitProjectText = tw.p`font-normal`;
 const LanguagesContainer = styled.div(({ $isSingleProjectOpen }) => [
   tw`relative flex flex-row justify-center md:justify-start flex-wrap bg-[#40403b] py-1.5 rounded-lg my-2`,
-  $isSingleProjectOpen ? tw`sm:ml-20 gap-2 px-3 mt-2` : tw`px-0.5 gap-1`,
+  $isSingleProjectOpen
+    ? tw`sm:mx-14 md:mx-20 gap-2 px-3 mt-2`
+    : tw`px-0.5 gap-1`,
 ]);
 
 const LanguageContainer = styled.div(
   ({ $isSingleProjectOpen, $imageExist }) => [
+    tw`relative px-2 border-white/40 gap-3 items-center`,
     $isSingleProjectOpen
-      ? tw`border-r-[1px] `
+      ? tw`border-r-[1px] flex`
       : !$imageExist
       ? tw`hidden`
-      : tw`border-r-[0px]`,
-    tw`relative flex px-2 border-white/40 gap-3 items-center`,
+      : tw`border-r-[0px] flex`,
   ]
 );
 
@@ -71,6 +73,7 @@ function SingleProject({
   isFloating,
   isSingleProject,
   containerRef,
+  isFixed,
 }) {
   const {
     id,
@@ -94,9 +97,9 @@ function SingleProject({
         navigate(`?projectId=${id}`);
       }}
       style={{
+        position: isFloating ? " absolute" : "relative ",
         top: isFloating && `${selectedProjectOffset.top}px`,
         left: isFloating && `${selectedProjectOffset.left}px`,
-        position: isFloating ? "absolute" : "relative",
         transitionDelay: isSingleProject
           ? "0ms"
           : isListHidden
@@ -109,7 +112,7 @@ function SingleProject({
      ${isSingleProject ? "z-0" : "z-10"}
     ${
       isSingleProjectOpen
-        ? `w-[100%] sm:w-[100%] md:w-[100%] xl:w-[100%] lg:w-[100%] h-max items-start bg-[#2b2b28]`
+        ? `w-[100%] sm:w-[100%] md:w-[100%] xl:w-[100%] lg:w-[100%] h-max items-start bg-[#2b2b28] ml-3 `
         : "w-[100%] sm:w-[47.5%] md:w-[32.4%] xl:w-[23.8%] lg:w-[31%] sm:h-[440px] md:h-[430px] h-max items-start bg-[#2b2b28] hover:bg-[#363632] hover:border-[#6b6b6b]"
     }
     ${
@@ -130,14 +133,18 @@ function SingleProject({
 
             navigate(``);
           }}
-          className="absolute top-4 left-2 z-50 w-14 md:w-20 md:h-10 h-8"
+          className={`${
+            isFixed
+              ? "fixed top-[58px] sm:top-[66px] xl:left-[101px] md:left-[37px] sm:left-[29px] "
+              : "absolute top-2 sm:top-4 left-2 "
+          } z-50 w-14 md:w-20 md:h-10 h-8`}
         >
-          <div className="w-full bg-gray-900/20 text-[12px] md:text-lg backdrop-blur-sm h-full flex justify-center items-center rounded-lg cursor-pointer hover:bg-black border border-white/10 transition-colors">
+          <div className="w-full bg-[#2B2B28] text-[12px] md:text-lg backdrop-blur-sm h-full flex justify-center items-center rounded-lg cursor-pointer  border border-white/10 transition-colors">
             ← Back
           </div>
         </div>
       )}
-      {isSingleProjectOpen && (
+      {isSingleProjectOpen && !isFixed && (
         <div
           onClick={(e) => {
             e.stopPropagation();
@@ -147,7 +154,7 @@ function SingleProject({
           }}
           className="absolute bottom-8 left-2 z-50 w-14 md:w-20 md:h-10 h-8"
         >
-          <div className="w-full bg-gray-900/20 text-[12px] md:text-lg backdrop-blur-sm h-full flex justify-center items-center rounded-lg cursor-pointer hover:bg-black border border-white/10 transition-colors">
+          <div className="w-full bg-gray-900/20 text-[12px] md:text-lg backdrop-blur-sm h-full flex justify-center items-center rounded-lg cursor-pointer  border border-white/10 transition-colors">
             ← Back
           </div>
         </div>
@@ -162,8 +169,8 @@ function SingleProject({
         </StatusContainer>
       </ImageWrapper>
       <div
-        className={` flex-1 justify-between flex flex-col  ${
-          isSingleProjectOpen ? "items-left" : "items-left"
+        className={` flex-1 justify-between flex flex-col   ${
+          isSingleProjectOpen ? "items-left pb-5 sm:pb-0" : "items-left"
         }`}
       >
         <Label $isSingleProjectOpen={isSingleProjectOpen}>{name}</Label>
