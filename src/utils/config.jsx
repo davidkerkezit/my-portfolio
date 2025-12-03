@@ -126,11 +126,11 @@ export const skills = [
 
 export const workplaces = [
   {
-    date: "Mar 2024 - Present",
+    date: "Mar 2024 - Dec 2025",
     position: "Frontend Developer (Full Time)",
     location: "Hora Games",
     link: "https://www.linkedin.com/company/horagames/",
-    description: `Currently, I work as a Frontend Developer at Hora Games, a company based in Novi Sad known for the popular crypto game Crypto Idle Miner. My work focuses on developing a variety of web projects using React and Astro, including a challenging React-based game and application for the Telegram platform inspired by Monopoly Go. This project pushed me to creatively solve complex architectural and gameplay problems. Additionally, I contribute to an iOS app built with React Native that tracks user steps, integrating native features for smooth performance. This role has taught me to write cleaner, more maintainable code, think critically and strategically, and adapt quickly to new challenges. Working in this fast-paced environment has sharpened my problem-solving skills and ability to deliver high-quality, scalable digital experiences.`,
+    description: `I worked as a Frontend Developer at Hora Games, a company based in Novi Sad known for the popular crypto game Crypto Idle Miner. My work focused on developing a variety of web projects using React and Astro, including a challenging React-based game and application for the Telegram platform inspired by Monopoly Go. This project pushed me to creatively solve complex architectural and gameplay problems. Additionally, I contributed to an iOS app built with React Native that tracked user steps, integrating native features for smooth performance. This role taught me to write cleaner, more maintainable code, think critically and strategically, and adapt quickly to new challenges. Working in this fast-paced environment sharpened my problem-solving skills and my ability to deliver high-quality, scalable digital experiences.`,
   },
   {
     date: "Oct 2023 - Nov 2023",
