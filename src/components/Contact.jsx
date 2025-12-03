@@ -6,6 +6,7 @@ import {
   MessageBubbleIcon,
 } from "../assets/icons/icons";
 import tw from "twin.macro";
+import emailjs from "emailjs-com";
 
 const Container = tw.div`md:pb-8 lg:pb-28 pt-8 lg:pt-14 w-full flex mx-auto flex-col lg:flex-row px-4 max-w-[800px] lg:max-w-[1000px] pb-20`;
 const LeftSection = tw.div`w-full `;
@@ -24,8 +25,8 @@ const SocialTitle = tw.p`text-xl uppercase font-light mr-12`;
 const FormContainer = tw.div`w-full mt-4 lg:mt-0 `;
 const FormTitle = tw.p`text-xl uppercase font-light mb-2 mt-0.5`;
 const Form = tw.form`flex flex-col w-[90%]`;
-const Label = tw.label`ml-2 -mb-1.5  bg-black w-max bg-primary z-10 px-2 font-light text-sm`;
-const Input = tw.input`bg-transparent border border-[#b3b3b3] rounded-md outline-none px-2 py-0.5 font-light   tracking-wide`;
+const Label = tw.label`ml-2 -mb-1.5 bg-black w-max bg-primary z-10 px-2 font-light text-sm`;
+const Input = tw.input`bg-transparent border border-[#b3b3b3] rounded-md outline-none px-2 py-0.5 font-light tracking-wide`;
 
 const Button = tw.button`uppercase text-base font-light mt-7 border border-white w-max px-10 py-1 mx-auto relative overflow-hidden`;
 const ButtonOverlay = tw.div`w-[1000px] h-[1000px] absolute rotate-45 bg-orange-500 duration-300 ease-in-out`;
@@ -33,11 +34,53 @@ const ButtonText = tw.p`z-10 relative`;
 
 function Contact({ contactRef }) {
   const [test, setTest] = useState(false);
-  const hoverHandler = () => {
-    setTest(true);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [buttonText, setButtonText] = useState("Send");
+
+  const hoverHandler = () => setTest(true);
+  const drugiHandler = () => setTest(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
-  const drugiHandler = () => {
-    setTest(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_5i1v0uw",
+        "template_ck7r2yj",
+        {
+          title: "New contact message",
+          name: formData.name,
+          time: new Date().toLocaleString(),
+          message: `Email: ${formData.email}\n\n${formData.message}`,
+        },
+        "XN_Vr3eaEcKSzHCOv"
+      )
+      .then(
+        () => {
+          setButtonText("Done");
+
+          setTimeout(() => {
+            setButtonText("Send");
+          }, 2000);
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          alert("Error sending message.");
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -53,10 +96,12 @@ function Contact({ contactRef }) {
         >
           Do you have a project to discuss?
         </Title>
+
         <SubTitleContainer>
           <SubTitle>Get in touch</SubTitle>
           <MessageBubbleIcon width={17} />
         </SubTitleContainer>
+
         <ContactRow>
           <ContactBlock>
             <ContactTitle>Contact</ContactTitle>
@@ -64,6 +109,7 @@ function Contact({ contactRef }) {
               davidkerkez@gmail.com
             </EmailLink>
           </ContactBlock>
+
           <SocialBlock>
             <SocialTitle>Social Media</SocialTitle>
             <SocialsContainer>
@@ -78,7 +124,6 @@ function Contact({ contactRef }) {
                 <InstagramIcon width={18} height={18} color="#F36C38" />
               </a>
               <div className="h-5 w-[1px] bg-orange-900" />
-
               <a href="https://www.facebook.com/djdavidkerkez" target="_blank">
                 <FacebookIcon width={18} height={18} color="#F36C38" />
               </a>
@@ -89,14 +134,37 @@ function Contact({ contactRef }) {
 
       <FormContainer>
         <FormTitle>Contact Form</FormTitle>
-        <Form>
+
+        <Form onSubmit={sendEmail}>
           <Label>Name</Label>
-          <Input type="text" />
+          <Input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+
           <Label className="mt-2.5">Email</Label>
-          <Input type="text" />
+          <Input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+
           <Label className="mt-2.5">Message</Label>
-          <Input type="text" />
-          <Button>
+          <Input
+            type="text"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+          />
+
+          <Button
+            onMouseEnter={hoverHandler}
+            onMouseLeave={drugiHandler}
+            type="submit"
+          >
             <ButtonOverlay
               className={
                 test
@@ -104,7 +172,7 @@ function Contact({ contactRef }) {
                   : `-left-[800px] top-[-70px]`
               }
             />
-            <ButtonText>Send</ButtonText>
+            <ButtonText>{buttonText}</ButtonText>
           </Button>
         </Form>
       </FormContainer>

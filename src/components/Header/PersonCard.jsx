@@ -2,7 +2,6 @@ import React from "react";
 import tw from "twin.macro";
 import img from "../../assets/me.jpg";
 import { socials } from "../../utils/config";
-
 const Container = tw.div`w-full md:w-max md:mx-4   sm:max-w-full  flex justify-center  lg:border-red-600 md:border-blue-600 xl:border-green-600 sm:border-yellow-600 sm:border-purple-600`;
 const CardContainer = tw.div` md:w-max  w-full mx-4 h-max md:bg-white rounded-2xl  md:px-[20px] xl:px-[40px] py-[30px] flex flex-col md:flex-col sm:flex-row sm:justify-center sm:gap-12 md:gap-0 items-center bg-[rgba(250, 247, 249,0.02)] border-[1px] border-[rgba(250, 247, 249,0.02)]`;
 const ImageContainer = tw.div`w-[240px] xl:w-[240px] md:w-[200px]  h-[285px] xl:md:h-[285px] md:h-[240px]  rounded-2xl overflow-hidden`;
