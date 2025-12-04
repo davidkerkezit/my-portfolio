@@ -75,7 +75,17 @@ export const Nav = ({ refs }) => {
   return (
     <Container>
       <div className="absolute w-full h-full bg-[#1e1d1ce9] backdrop-blur-lg  top-0 left-0" />
-      <p className="z-10 hidden md:block">DK </p>
+      <button
+        onClick={() => {
+          window.scrollTo({
+            top: top,
+            behavior: "smooth",
+          });
+        }}
+        className="z-10 hidden md:block"
+      >
+        DK
+      </button>
       <div className="z-10 h-full flex flex-row justify-center items-centers w-full md:justify-end gap-2">
         {navItems.map((item) => {
           const Component = item.icon;
