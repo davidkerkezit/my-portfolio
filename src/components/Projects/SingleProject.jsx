@@ -74,6 +74,7 @@ function SingleProject({
   isSingleProject,
   containerRef,
   isFixed,
+  isFixedSecondButton,
 }) {
   const {
     id,
@@ -129,7 +130,6 @@ function SingleProject({
         <div
           onClick={(e) => {
             e.stopPropagation();
-            console.log("here");
 
             navigate(``);
           }}
@@ -144,11 +144,10 @@ function SingleProject({
           </div>
         </div>
       )}
-      {isSingleProjectOpen && !isFixed && (
+      {isSingleProjectOpen && !isFixedSecondButton && (
         <div
           onClick={(e) => {
             e.stopPropagation();
-            console.log("here");
 
             navigate(``);
           }}

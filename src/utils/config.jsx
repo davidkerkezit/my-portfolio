@@ -888,7 +888,7 @@ export const projects = [
     floatAnimTime: 400,
     customComponent: (
       <div>
-        <div className="text-white text-md font-light  sm:px-20 text-center sm:text-left ">
+        <div className="text-white text-md font-light   sm:px-[56px] md:px-20 text-center sm:text-left  ">
           <div className="w-full h-[0.1px] bg-white/20 my-4" />
           This project was relatively lightweight and static, focusing on
           delivering clean, responsive pages. It was built using
