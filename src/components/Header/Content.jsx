@@ -18,8 +18,8 @@ const HighlightText = tw.p`uppercase lg:text-base  text-[14px] font-light leadin
 function Content({ contactRef }) {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/DavidCV2025v2.pdf";
-    link.download = "DavidCV2025v2.pdf";
+    link.href = "/DavidKerkez_CV.pdf";
+    link.download = "DavidKerkez_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
