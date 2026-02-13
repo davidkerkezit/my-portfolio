@@ -181,11 +181,18 @@ export const skills = [
 
 export const workplaces = [
   {
+    date: "Jan 2026 - Present",
+    position: "Frontend Developer (Full Time)",
+    location: "AxiomQ",
+    link: "https://axiomq.com/",
+    description: `I worked as a Frontend Developer at Hora Games, a company based in Novi Sad known for the popular crypto game Crypto Idle Miner. My work focused on developing a variety of web projects using React and Astro, including a challenging React-based game and application for the Telegram platform inspired by Monopoly Go. This project pushed me to creatively solve complex architectural and gameplay problems. Additionally, I contributed to an iOS app built with React Native that tracked user steps, integrating native features for smooth performance. This role taught me to write cleaner, more maintainable code, think critically and strategically, and adapt quickly to new challenges. Working in this fast-paced environment sharpened my problem-solving skills and my ability to deliver high-quality, scalable digital experiences.`,
+  },
+  {
     date: "Mar 2024 - Dec 2025",
     position: "Frontend Developer (Full Time)",
     location: "Hora Games",
     link: "https://www.linkedin.com/company/horagames/",
-    description: `I worked as a Frontend Developer at Hora Games, a company based in Novi Sad known for the popular crypto game Crypto Idle Miner. My work focused on developing a variety of web projects using React and Astro, including a challenging React-based game and application for the Telegram platform inspired by Monopoly Go. This project pushed me to creatively solve complex architectural and gameplay problems. Additionally, I contributed to an iOS app built with React Native that tracked user steps, integrating native features for smooth performance. This role taught me to write cleaner, more maintainable code, think critically and strategically, and adapt quickly to new challenges. Working in this fast-paced environment sharpened my problem-solving skills and my ability to deliver high-quality, scalable digital experiences.`,
+    description: `I currently work as a Frontend Developer on a scalable SaaS application, building both the React Native mobile app and the web platform. My work involves implementing core features using TanStack Query, Redux, Zod, TypeORM, and SQLite, while maintaining a clean and modular architecture within an Nx monorepo. This role strengthens my ability to deliver maintainable, efficient solutions and solve complex technical challenges across both mobile and web environments.`,
   },
   {
     date: "Oct 2023 - Nov 2023",
